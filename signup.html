@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OncoPort Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            background-color: rgba(255, 2, 100, 0.7);
+            border-color: rgba(255, 2, 100, 0.7);
+        }
+        .btn-primary:hover {
+            background-color: rgba(255, 2, 100, 0.8);
+            border-color: rgba(255, 2, 100, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-form">
+        <h3 class="text-center">Create Your OncoPort Account</h3>
+        <form>
+            <!-- Username -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+            </div>
+
+            <!-- Age -->
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" placeholder="Enter your age">
+            </div>
+
+            <!-- Condition -->
+            <div class="form-group">
+                <label for="condition">Medical Condition</label>
+                <input type="text" class="form-control" id="condition" placeholder="Enter your medical condition">
+            </div>
+
+            <!-- Hobbies -->
+            <div class="form-group">
+                <label for="hobbies">Hobbies</label>
+                <input type="text" class="form-control" id="hobbies" placeholder="Enter your hobbies">
+            </div>
+
+            <!-- Other Personal Info -->
+            <div class="form-group">
+                <label for="personal-info">Tell us something fun about you</label>
+                <textarea class="form-control" id="personal-info" rows="3" placeholder="Share a fun fact, favorite activities, etc."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Chat - OncoPort</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+        .chat-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .chat-header {
+            background-color: #17a2b8;
+            color: #fff;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .chat-body {
+            padding: 15px;
+            height: 600px;
+            overflow-y: auto;
+        }
+        .chat-message {
+            margin-bottom: 20px;
+            display: flex;
+        }
+        .chat-message .message-content {
+            max-width: 70%;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+        .chat-message.patient .message-content {
+            background-color: #e9ecef;
+            color: #333;
+            align-self: flex-end;
+            border-radius: 10px 10px 0 10px;
+        }
+        .chat-message.robot .message-content {
+            background-color: #17a2b8;
+            color: #fff;
+            align-self: flex-start;
+            border-radius: 10px 10px 10px 0;
+        }
+        .chat-footer {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+        }
+        .chat-footer input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+        .chat-footer button {
+            margin-left: 10px;
+            background-color: #17a2b8;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .chat-actions {
+            margin: 20px 15px;
+            text-align: right;
+        }
+        .chat-actions button {
+            margin-left: 10px;
+            background-color: #6c757d;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .chat-actions button:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            Medical Chat - Ask Your Questions
+        </div>
+        <div class="chat-body">
+            <div class="chat-message patient">
+                <div class="message-content">
+                    What are the symptoms of COVID-19?
+                </div>
+            </div>
+            <div class="chat-message robot">
+                <div class="message-content">
+                    COVID-19 symptoms include fever, dry cough, and fatigue. Some patients may also experience loss of taste or smell, body aches, and shortness of breath.
+                </div>
+            </div>
+            <div class="chat-message patient">
+                <div class="message-content">
+                    Should I take aspirin daily to prevent heart attacks?
+                </div>
+            </div>
+            <div class="chat-message robot">
+                <div class="message-content">
+                    Aspirin therapy should only be taken under the guidance of a doctor. It can help prevent heart attacks in some people, but it also increases the risk of bleeding.
+                </div>
+            </div>
+            <div class="chat-message patient">
+                <div class="message-content">
+                    How can I improve my immune system?
+                </div>
+            </div>
+            <div class="chat-message robot">
+                <div class="message-content">
+                    To improve your immune system, maintain a healthy diet, exercise regularly, get enough sleep, manage stress, and avoid smoking. Consult your doctor for personalized advice.
+                </div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Type your message...">
+            <button>Send</button>
+        </div>
+        <div class="chat-actions">
+            <button>Restart Chat</button>
+            <button>Save Chat</button>
+            <button>Export Chat</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

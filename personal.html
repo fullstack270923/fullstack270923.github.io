@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - OncoPort</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            background-color: #6c757d; /* Soft gray sidebar */
+            color: #fff;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+            border-radius: 5px;
+            padding-left: 10px;
+        }
+        .sidebar i {
+            margin-right: 10px;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #495057; /* Darker gray header */
+            color: #fff;
+            font-weight: bold;
+            border-bottom: none;
+        }
+        .timeline {
+            list-style: none;
+            padding: 0;
+            position: relative;
+        }
+        .timeline:before {
+            content: '';
+            background: #dee2e6;
+            display: inline-block;
+            position: absolute;
+            left: 20px;
+            width: 2px;
+            height: 100%;
+            z-index: 400;
+        }
+        .timeline>li {
+            position: relative;
+            min-height: 50px;
+            padding: 20px 0;
+        }
+        .timeline .timeline-icon {
+            position: absolute;
+            left: 10px;
+            top: 20px;
+            z-index: 100;
+            background: #17a2b8; /* Soft teal */
+            border-radius: 50%;
+            height: 12px;
+            width: 12px;
+        }
+        .timeline .timeline-icon.bg-danger {
+            background: #dc3545; /* Soft red */
+        }
+        .timeline .timeline-label {
+            margin-left: 40px;
+            font-weight: bold;
+            color: #495057;
+        }
+        .timeline .timeline-label small {
+            color: #6c757d;
+        }
+        .timeline .timeline-label .text-danger {
+            color: #dc3545;
+        }
+        .text-primary {
+            color: #17a2b8 !important; /* Soft teal */
+        }
+        .text-danger {
+            color: #dc3545 !important; /* Soft red */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h5>Hello, User</h5>
+        <a href="#"><i class="fas fa-user"></i> Personal Info</a>
+        <a href="#"><i class="fas fa-calendar-alt"></i> Calendar</a>
+        <a href="#"><i class="fas fa-stethoscope"></i> Doctors</a>
+        <a href="#"><i class="fas fa-file-alt"></i> Appointments <span class="badge badge-light ml-auto">2</span></a>
+        <a href="#"><i class="fas fa-file"></i> Documents</a>
+        <a href="#"><i class="fas fa-envelope"></i> Messages <span class="badge badge-light ml-auto">4</span></a>
+        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        <a href="#"><i class="fas fa-users"></i> User Access</a>
+        <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- Personal Info Card -->
+            <div class="card">
+                <div class="card-header">
+                    Personal Info
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><strong>Name:</strong> John Doe</p>
+                            <p><strong>Weight:</strong> 75 kg</p>
+                            <p><strong>Height:</strong> 180 cm</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Date of Birth:</strong> Jan-01, 1985</p>
+                            <p><strong>Insurance Number:</strong> 1234567890</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Last Visit:</strong> 20-07-2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline and Tests -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Timeline
+                        </div>
+                        <div class="card-body">
+                            <ul class="timeline">
+                                <li>
+                                    <span class="timeline-icon"></span>
+                                    <span class="timeline-label">Dermatologist Visit, Room 411 <small>07:30 AM, Done</small></span>
+                                </li>
+                                <li>
+                                    <span class="timeline-icon bg-danger"></span>
+                                    <span class="timeline-label">Blood Chemistry Test, Lab 2 <small class="text-danger">Canceled</small></span>
+                                </li>
+                                <li>
+                                    <span class="timeline-icon"></span>
+                                    <span class="timeline-label">Allergist Visit, Room 27 <small>11:00 AM, Done</small></span>
+                                </li>
+                                <li>
+                                    <span class="timeline-icon"></span>
+                                    <span class="timeline-label">Ophthalmologist Visit, Room 411 <small>12:20 PM, Pending</small></span>
+                                </li>
+                                <li>
+                                    <span class="timeline-icon"></span>
+                                    <span class="timeline-label">Blood Chemistry Test, Lab 1 <small>13:00 PM, Pending</small></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Blood Test, 08-12-2023
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Hemoglobin (Hgb/HB):</strong> <span class="text-primary">15.2 g/dL</span></p>
+                            <p><strong>White Blood Cells (WBCs):</strong> <span class="text-primary">3 620 mcL</span></p>
+                            <p><strong class="text-danger">Red Blood Cells (WBCs):</strong> 3.9 mcL</p>
+                            <p><strong>Hematocrit (HTC):</strong> <span class="text-primary">47%</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medication Guide -->
+            <div class="card">
+                <div class="card-header">
+                    Medication Guide
+                </div>
+                <div class="card-body">
+                    <p><strong>Aspirin, tablets 0.5</strong> <small>(2 packs, 500 mg)</small></p>
+                    <p><strong>Ibuprofen, tablets</strong> <small>(1 pack, 200 mg)</small></p>
+                    <p><strong>Paracetamol, tablets bp 500</strong> <small>(2 packs, 500 mg)</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome and Bootstrap JS -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
